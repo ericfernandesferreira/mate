@@ -8,7 +8,7 @@ https://github.com/mateslackbuilds/msb
 Esse source foi construído principalmente para quem quiser usar a última versão do mate junto com o pulseaudio ou com jack audio.
 
 Requerimentos:
-- slackware64 Current
+- slackware64 current
 - pulseaudio ou jack audio
 
 Conteúdo:
@@ -26,6 +26,40 @@ Conteúdo:
 
 Como instalar:
 - você precisa baixar o .zip ou clonar o git e então em ordem executar os scripts
+sh mate-build-deps.sh
+sh mate-build-base.sh
+sh mate-build-extra.sh
+
+_______________________________________________________________
+
+Mate Version: 1.11.0
+Mate Source: github
+
+My mate version is based on version of Willysr
+https://github.com/mateslackbuilds/msb
+*** All credits go to him.
+
+This source was built especially for those who want to use the latest version of mate along with pulseaudio or jack audio.
+
+Requirements:
+- Current Slackware64
+- pulseaudio or jack audio
+
+Contents:
+- atril
+- caja
+- engrampa
+- eom
+- galculator
+- marco
+- mate system monitor
+- mate terminal
+- mozo
+- pluma
+- weather
+
+How to install:
+- You need to download the .zip or clone git and then in order to run scripts
 sh mate-build-deps.sh
 sh mate-build-base.sh
 sh mate-build-extra.sh
