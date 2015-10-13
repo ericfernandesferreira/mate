@@ -85,7 +85,7 @@ for dir in \
       exit 1
     fi
   fi
-  mv $PACKAGE /home/backup/app/slackware/mate/1.11/install/extra
+# mv $PACKAGE /home/backup/app/slackware/mate/1.11/install/extra
 # mv $PACKAGE /home/backup/app/slackware/mate/1.11/install-jack/extra
   # back to original directory
   cd $MSBROOT

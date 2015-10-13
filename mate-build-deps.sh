@@ -93,7 +93,7 @@ for dir in \
       exit 1
     fi
   fi
-  mv $PACKAGE /home/backup/app/slackware/mate/1.11/install/deps
+# mv $PACKAGE /home/backup/app/slackware/mate/1.11/install/deps
 # mv $PACKAGE /home/backup/app/slackware/mate/1.11/install-jack/deps
   # back to original directory
   cd $MSBROOT
