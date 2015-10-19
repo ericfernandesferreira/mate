@@ -112,10 +112,5 @@ chown -R root:root $PKG/usr/doc/$PRGNAM-$VERSION
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
-# Fazendo o cursor do mouse padrão em qualquer ambiente
-cp $CWD/.Xresources /home/eric/
-mkdir -p /home/eric/.icons/default
-cp $CWD/index.theme /home/eric/.icons/default/
-
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
