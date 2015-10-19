@@ -85,6 +85,7 @@ sh autogen.sh \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
+  --enable-oss \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make
