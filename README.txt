@@ -30,6 +30,9 @@ sh mate-build-deps.sh
 sh mate-build-base.sh
 sh mate-build-extra.sh
 
+Depois de ter compilado todo o Mate entre na pasta "post-config" e então
+execute o script "sh post-config.sh" como USUÁRIO.
+
 _______________________________________________________________
 
 Mate Version: 1.11.0
@@ -63,3 +66,6 @@ How to install:
 sh mate-build-deps.sh
 sh mate-build-base.sh
 sh mate-build-extra.sh
+
+Once you have compiled all of Mate, enter in "post-config" folder and then
+run the script "sh post-config.sh" as USER only.
