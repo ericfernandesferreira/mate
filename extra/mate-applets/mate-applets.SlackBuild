@@ -89,8 +89,8 @@ sh autogen.sh \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --disable-cpufreq \
   --disable-static \
+  --disable-cpufreq \
   --without-help-dir \
   --build=$ARCH-slackware-linux
 
