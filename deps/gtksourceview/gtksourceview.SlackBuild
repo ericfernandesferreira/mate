@@ -41,7 +41,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://ftp.acc.umu.se/pub/GNOME/sources/gtksourceview/2.10/$PRGNAM-$VERSION.tar.gz
+wget -c http://download.gnome.org/sources/gtksourceview/2.10/$PRGNAM-$VERSION.tar.gz
 
 NUMJOBS=${NUMJOBS:-" -j8 "}
 

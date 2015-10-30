@@ -26,7 +26,7 @@
 
 PRGNAM=system-tools-backends
 VERSION=${VERSION:-2.10.2}
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
 if [ -z "$ARCH" ]; then
@@ -37,7 +37,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://ftp.gnome.org/pub/gnome/sources/system-tools-backends/2.10/$PRGNAM-$VERSION.tar.bz2
+wget -c http://download.gnome.org/sources/system-tools-backends/2.10/$PRGNAM-$VERSION.tar.bz2
 
 NUMJOBS=${NUMJOBS:-" -j8 "}
 

@@ -39,7 +39,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://ftp.gnome.org/pub/gnome/sources/pangomm/2.36/$PRGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/pangomm/2.36/$PRGNAM-$VERSION.tar.xz
 
 NUMJOBS=${NUMJOBS:-" -j8 "}
 
