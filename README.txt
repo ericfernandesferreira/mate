@@ -5,7 +5,8 @@ Essa minha versão do mate é baseada na versão do Willysr
 https://github.com/mateslackbuilds/msb
 ***Todos os créditos vão para ele.
 
-Esse source foi construído principalmente para quem quiser usar a última versão do mate junto com o pulseaudio ou com jack audio.
+Esse source foi construído principalmente para quem quiser usar a última versão
+do Mate junto com o pulseaudio ou com jack audio.
 
 Requerimentos:
 - slackware64 current
@@ -35,17 +36,18 @@ execute o script "sh post-config.sh" como USUÁRIO.
 
 _______________________________________________________________
 
-Mate Version: 1.11.0
-Mate Source: github
+Mate Version : 1.11.0
+Mate Source : github
 
 My mate version is based on version of Willysr
 https://github.com/mateslackbuilds/msb
 *** All credits go to him.
 
-This source was built especially for those who want to use the latest version of mate along with pulseaudio or jack audio.
+This source was built especially for those who want to use the latest version
+of mate along with pulseaudio or jack audio.
 
 Requirements:
-- Current Slackware64
+- current slackware64
 - pulseaudio or jack audio
 
 Contents:
@@ -62,7 +64,7 @@ Contents:
 - weather
 
 How to install:
-- You need to download the .zip or clone git and then in order to run scripts
+- you need to download the .zip or clone git and then in order to run scripts
 sh mate-build-deps.sh
 sh mate-build-base.sh
 sh mate-build-extra.sh
