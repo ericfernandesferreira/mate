@@ -49,7 +49,6 @@ for dir in \
   deps/pangox-compat \
   deps/gtk-engines \
   deps/murrine \
-  deps/pygobject3 \
   deps/gtksourceview \
   deps/pygtksourceview \
   deps/libgtop \
