@@ -50,7 +50,6 @@ for dir in \
   extra/mate-utils \
   extra/mozo \
   extra/pluma \
-  extra/mate-system-tools \
   extra/gnome-main-menu \
   ; do
   # Get the package name
@@ -85,8 +84,6 @@ for dir in \
       exit 1
     fi
   fi
-# mv $PACKAGE /home/backup/app/slackware/mate/1.11/install/extra
-# mv $PACKAGE /home/backup/app/slackware/mate/1.11/install-jack/extra
   # back to original directory
   cd $MSBROOT
 done

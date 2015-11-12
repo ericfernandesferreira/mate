@@ -63,11 +63,6 @@ for dir in \
   deps/atkmm \
   deps/mm-common \
   deps/gtkmm \
-  deps/perl-xml-twig \
-  deps/perl-net-dbus \
-  deps/system-tools-backends \
-  deps/liboobs \
-  deps/docutils \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)
@@ -92,8 +87,6 @@ for dir in \
       exit 1
     fi
   fi
-# mv $PACKAGE /home/backup/app/slackware/mate/1.11/install/deps
-# mv $PACKAGE /home/backup/app/slackware/mate/1.11/install-jack/deps
   # back to original directory
   cd $MSBROOT
 done
