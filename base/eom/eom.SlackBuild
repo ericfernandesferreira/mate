@@ -92,7 +92,6 @@ sh autogen.sh \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --without-help-dir \
   --build=$ARCH-slackware-linux
 
 # This is needed in -current, but should be harmless in -stable as well

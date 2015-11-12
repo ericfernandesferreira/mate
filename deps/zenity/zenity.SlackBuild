@@ -48,7 +48,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
+tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
 cd $PRGNAM-$VERSION
 chown -R root:root .
 find -L . \
@@ -67,7 +67,6 @@ CXXFLAGS="$SLKCFLAGS" \
   --mandir=/usr/man \
   --enable-debug=no \
   --enable-libnotify \
-  --without-help-dir \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make

@@ -92,6 +92,7 @@ sh autogen.sh \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
   --enable-mpaste \
+  --enable-introspection \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make

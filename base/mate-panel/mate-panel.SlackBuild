@@ -92,7 +92,6 @@ sh autogen.sh \
   --disable-static \
   --libexecdir=/usr/lib${LIBDIRSUFFIX}/mate-panel \
   --enable-introspection \
-  --without-help-dir \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make

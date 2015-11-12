@@ -97,7 +97,11 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
   --enable-debug=no \
+  --enable-dbus=yes \
+  --enable-bacon=yes \
   --disable-maintainer-flags \
+  --enable-introspection=yes \
+  --with-x \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make

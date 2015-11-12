@@ -94,6 +94,7 @@ sh autogen.sh \
   --libexecdir=/usr/lib${LIBDIRSUFFIX} \
   --enable-upower \
   --without-systemd \
+  --disable-static \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make

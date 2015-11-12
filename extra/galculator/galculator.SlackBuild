@@ -90,7 +90,7 @@ sh autogen.sh \
   --enable-static=no \
   --build=$ARCH-slackware-linux
 
-make
+make $NUMJOBS || make
 make install-strip DESTDIR=$PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \

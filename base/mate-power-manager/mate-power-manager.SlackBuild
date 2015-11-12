@@ -96,7 +96,7 @@ sh autogen.sh \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --libexecdir=/usr/lib${LIBDIRSUFFIX}/mate-power-manager \
   --disable-applets \
-  --without-help-dir \
+  --disable-static \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make

@@ -88,10 +88,9 @@ sh autogen.sh \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  --disable-cpufreq \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
-  --without-help-dir \
+  --with-cpufreq-lib=cpufreq \
   --build=$ARCH-slackware-linux
 
 make $NUMJOBS || make
