@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=mate-power-manager
-VERSION=${VERSION:-1.12.0}
+VERSION=${VERSION:-1.13.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
@@ -37,8 +37,6 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
-
-NUMJOBS=${NUMJOBS:-" -j8 "}
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
@@ -95,11 +93,12 @@ sh autogen.sh \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --libexecdir=/usr/lib${LIBDIRSUFFIX}/mate-power-manager \
-  --disable-applets \
   --disable-static \
+  --disable-applets \
+  --without-help-dir \
   --build=$ARCH-slackware-linux
 
-make $NUMJOBS || make
+make
 make install DESTDIR=$PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
@@ -125,9 +124,7 @@ fi
 rm -rf $PKG/usr/share/omf/mate-power-manager
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a \
-  AUTHORS COPYING ChangeLog HACKING NEWS* README TODO \
-  $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a AUTHORS COPYING ChangeLog HACKING NEWS* README TODO $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 find $PKG/usr/doc/$PRGNAM-$VERSION/ -type f -exec chmod 644 {} \;
 chown -R root:root $PKG/usr/doc/$PRGNAM-$VERSION

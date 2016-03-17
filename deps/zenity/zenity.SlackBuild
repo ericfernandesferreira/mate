@@ -21,8 +21,6 @@ fi
 
 wget -c http://download.gnome.org/sources/zenity/3.18/$PRGNAM-$VERSION.tar.xz
 
-NUMJOBS=${NUMJOBS:-" -j8 "}
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
 PKG=$TMP/package-$PRGNAM
@@ -67,9 +65,10 @@ CXXFLAGS="$SLKCFLAGS" \
   --mandir=/usr/man \
   --enable-debug=no \
   --enable-libnotify \
+  --without-help-dir \
   --build=$ARCH-slackware-linux
 
-make $NUMJOBS || make
+make
 make install-strip DESTDIR=$PKG
 
 find $PKG/usr/man -type f -exec gzip -9 {} \;

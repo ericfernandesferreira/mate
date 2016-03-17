@@ -40,8 +40,6 @@ fi
 
 wget -c http://download.gnome.org/sources/libunique/1.1/libunique-1.1.6.tar.bz2
 
-NUMJOBS=${NUMJOBS:-" -j8 "}
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
 PKG=$TMP/package-$PRGNAM
@@ -76,14 +74,7 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-patch -p1 -i $CWD/libunique-1.1.6-upstream_fixes-1.patch
-
-# Flags removidas para teste
-# --enable-dbus=no
-# --enable-bacon=yes
-# --enable-introspection=no
-# --disable-dependency-tracking
-# --with-x
+patch -p1 < $CWD/libunique-1.1.6-G_CONST_RETURN.patch
 
 autoreconf -fi
 CFLAGS="$SLKCFLAGS" \
@@ -97,14 +88,15 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
   --enable-debug=no \
-  --enable-dbus=yes \
+  --enable-dbus=no \
   --enable-bacon=yes \
   --disable-maintainer-flags \
-  --enable-introspection=yes \
+  --disable-dependency-tracking \
+  --enable-introspection=no \
   --with-x \
   --build=$ARCH-slackware-linux
 
-make $NUMJOBS || make
+make
 make install DESTDIR=$PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
