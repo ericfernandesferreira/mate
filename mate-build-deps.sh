@@ -40,7 +40,6 @@ MSBROOT=$(pwd)
 # Loop for all dependency packages
 for dir in \
   deps/exempi \
-  deps/libgnomecanvas \
   deps/zenity \
   deps/rarian \
   deps/yelp-xsl \
@@ -56,13 +55,6 @@ for dir in \
   deps/gksu \
   deps/gssdp \
   deps/gupnp \
-  deps/libsigc++ \
-  deps/glibmm \
-  deps/cairomm \
-  deps/pangomm \
-  deps/atkmm \
-  deps/mm-common \
-  deps/gtkmm \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)
