@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=mate-system-monitor
-VERSION=${VERSION:-1.13.1}
+VERSION=${VERSION:-1.14.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
@@ -84,6 +84,9 @@ sh autogen.sh \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
+  --disable-systemd \
+  --disable-gtk3 \
+  --enable-gtk2 \
   --without-help-dir \
   --build=$ARCH-slackware-linux
 

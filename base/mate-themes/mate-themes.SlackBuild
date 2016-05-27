@@ -26,12 +26,13 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=mate-themes
-VERSION=${VERSION:-1.13.0}
-GTKVERSION=${GTKVERSION:-gtk3.18}
+VERSION=${VERSION:-3.18.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
 ARCH=noarch
+
+wget -c http://pub.mate-desktop.org/releases/themes/3.18/$PRGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
@@ -57,10 +58,11 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM
-git clone https://github.com/mate-desktop/mate-themes.git
-cd $PRGNAM
-git checkout
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
+# git clone https://github.com/mate-desktop/mate-themes.git
+cd $PRGNAM-$VERSION
+# git checkout
 
 chown -R root:root .
 find -L . \
@@ -71,7 +73,7 @@ find -L . \
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-sh autogen.sh \
+./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
