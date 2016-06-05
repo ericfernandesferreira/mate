@@ -44,6 +44,7 @@ for dir in \
   deps/rarian \
   deps/yelp-xsl \
   deps/yelp-tools \
+  deps/vte3 \
   deps/libwnck3 \
   deps/libunique \
   deps/pangox-compat \
