@@ -85,8 +85,6 @@ sh autogen.sh \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
   --disable-systemd \
-  --disable-gtk3 \
-  --enable-gtk2 \
   --without-help-dir \
   --build=$ARCH-slackware-linux
 
