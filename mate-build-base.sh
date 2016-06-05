@@ -38,29 +38,28 @@ TMP=${TMP:-/tmp}
 # This is the original directory where you started this script
 MSBROOT=$(pwd)
 
-#  base/mate-common \
-#  base/mate-desktop \
-#  base/libmatekbd \
-#  base/libmateweather \
-#  base/mate-icon-theme \
-#  base/caja \
-#  base/mate-polkit \
-#  base/marco \
-#  base/libmatemixer \
-#  base/mate-settings-daemon \
-#  base/mate-session-manager \
-#  base/mate-menus \
-#  base/mate-terminal \
-#  base/mate-panel \
-#  base/mate-backgrounds \
-#  base/mate-themes \
-#  base/mate-notification-daemon \
-#  base/eom \
-#  base/mate-control-center \
-#  base/mate-screensaver \
-
 # Loop for all base packages
 for dir in \
+  base/mate-common \
+  base/mate-desktop \
+  base/libmatekbd \
+  base/libmateweather \
+  base/mate-icon-theme \
+  base/caja \
+  base/mate-polkit \
+  base/marco \
+  base/libmatemixer \
+  base/mate-settings-daemon \
+  base/mate-session-manager \
+  base/mate-menus \
+  base/mate-terminal \
+  base/mate-panel \
+  base/mate-backgrounds \
+  base/mate-themes \
+  base/mate-notification-daemon \
+  base/eom \
+  base/mate-control-center \
+  base/mate-screensaver \
   base/engrampa \
   base/mate-media \
   base/mate-power-manager \
