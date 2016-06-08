@@ -1,4 +1,4 @@
-Versão do Mate : 1.15.0
+Versão do Mate : 1.14.1
 Source do Mate : github
 
 Essa minha versão do mate é baseada na versão do Willysr
@@ -36,7 +36,7 @@ execute o script "sh post-config.sh" como USUÁRIO.
 
 _______________________________________________________________
 
-Mate Version : 1.15.0
+Mate Version : 1.14.1
 Mate Source : github
 
 My mate version is based on version of Willysr
