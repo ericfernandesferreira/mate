@@ -91,7 +91,7 @@ for dir in \
   if [ "$INST" = "1" ]; then
     PACKAGE=$(ls $TMP/${package}-${version}-*-${build}*.txz 2>/dev/null)
     if [ -f "$PACKAGE" ]; then
-      installpkg "$PACKAGE"
+      upgradepkg --reinstall --install-new "$PACKAGE"
     else
       echo "Error:  package to upgrade "$PACKAGE" not found in $TMP"
       exit 1
