@@ -40,6 +40,7 @@ MSBROOT=$(pwd)
 
 # Loop for all extra packages
 for dir in \
+  extra/libxnvctrl \
   extra/galculator \
   extra/atril \
   extra/caja-extensions \
