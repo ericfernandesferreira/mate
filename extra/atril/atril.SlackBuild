@@ -74,16 +74,10 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-# Flags do Arch
-# --enable-dvi
-# --enable-epub
-# --enable-t1lib
-# --enable-pixbuf
-# --enable-xps
-# --enable-introspection
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
+LDFLAGS="-L/usr/share/texmf/lib" \
+CPPFLAGS="-I/usr/share/texmf/include" \
 sh autogen.sh \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
@@ -95,6 +89,7 @@ sh autogen.sh \
   --disable-epub \
   --enable-pixbuf \
   --without-help-dir \
+  --enable-introspection \
   --build=$ARCH-slackware-linux
 
 make

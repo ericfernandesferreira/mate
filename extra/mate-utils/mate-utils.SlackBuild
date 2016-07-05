@@ -74,11 +74,6 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-# Flags do Arch
-# --enable-deprecated
-# Flags do Mint
-# --enable-deprecated
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 sh autogen.sh \
@@ -90,6 +85,7 @@ sh autogen.sh \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-maintainer-flags \
   --disable-static \
+  --disable-debug \
   --without-help-dir \
   --build=$ARCH-slackware-linux
 
