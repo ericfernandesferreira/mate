@@ -24,8 +24,6 @@
 
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
-
-
 PRGNAM=vte3
 SRCNAM=vte
 VERSION=${VERSION:-0.44.2}
