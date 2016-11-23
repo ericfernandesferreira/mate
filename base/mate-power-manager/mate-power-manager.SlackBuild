@@ -38,6 +38,8 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+wget -c https://github.com/mate-desktop/$PRGNAM/archive/v$VERSION.tar.gz
+
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
 PKG=$TMP/package-$PRGNAM
@@ -62,10 +64,11 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM
-git clone https://github.com/mate-desktop/mate-power-manager.git
-cd $PRGNAM
-git checkout
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/v$VERSION.tar.gz
+# git clone https://github.com/mate-desktop/mate-power-manager.git
+cd $PRGNAM-$VERSION
+# git checkout
 
 chown -R root:root .
 find -L . \
@@ -94,7 +97,7 @@ sh autogen.sh \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --libexecdir=/usr/lib${LIBDIRSUFFIX}/mate-power-manager \
   --disable-static \
-  --disable-applets \
+  --enable-applets \
   --without-help-dir \
   --build=$ARCH-slackware-linux
 
