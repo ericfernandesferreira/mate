@@ -77,10 +77,6 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-# Flags do Arch
-# --enable-polkit
-# --enable-ipv6
-
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 sh autogen.sh \
@@ -92,6 +88,7 @@ sh autogen.sh \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
   --with-cpufreq-lib=cpufreq \
+  --disable-stickynotes \
   --without-help-dir \
   --build=$ARCH-slackware-linux
 
