@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=mate-themes
-VERSION=${VERSION:-3.18.4}
+VERSION=${VERSION:-3.18.5}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
