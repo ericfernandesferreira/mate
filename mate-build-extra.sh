@@ -41,7 +41,7 @@ MSBROOT=$(pwd)
 # Loop for all extra packages
 for dir in \
   extra/libxnvctrl \
-  extra/galculator \
+  extra/mate-calc \
   extra/atril \
   extra/caja-extensions \
   extra/mate-applets \
