@@ -1,4 +1,4 @@
-Versão do Mate : 1.16.1
+Versão do Mate : 1.18.0
 Source do Mate : github
 
 Essa minha versão do mate é baseada na versão do Willysr
@@ -9,7 +9,7 @@ Esse source foi construído principalmente para quem quiser usar a última vers�
 do Mate junto com o pulseaudio ou com jack audio.
 
 Requerimentos:
-- slackware64 14.2
+- slackware64 14.2 / Current
 - pulseaudio ou jack audio
 
 Conteúdo:
@@ -17,7 +17,7 @@ Conteúdo:
 - caja
 - engrampa
 - eom
-- galculator
+- mate calc
 - marco
 - mate system monitor
 - mate terminal
@@ -36,7 +36,7 @@ execute o script "sh post-config.sh" como USUÁRIO.
 
 _______________________________________________________________
 
-Mate Version : 1.16.1
+Mate Version : 1.18.0
 Mate Source : github
 
 My mate version is based on version of Willysr
@@ -47,7 +47,7 @@ This source was built especially for those who want to use the latest version
 of mate along with pulseaudio or jack audio.
 
 Requirements:
-- slackware64 14.2
+- slackware64 14.2 / Current
 - pulseaudio or jack audio
 
 Contents:
@@ -55,7 +55,7 @@ Contents:
 - caja
 - engrampa
 - eom
-- galculator
+- mate calc
 - marco
 - mate system monitor
 - mate terminal
