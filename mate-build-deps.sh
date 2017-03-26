@@ -41,17 +41,20 @@ MSBROOT=$(pwd)
 for dir in \
   deps/exempi \
   deps/zenity \
+  deps/vala \
   deps/rarian \
   deps/yelp-xsl \
   deps/yelp-tools \
   deps/vte3 \
   deps/libwnck3 \
   deps/libunique \
+  deps/libunique3 \
   deps/pangox-compat \
   deps/gtk-engines \
   deps/murrine \
-  deps/gtksourceview \
-  deps/pygtksourceview \
+  deps/glade \
+  deps/libpeas \
+  deps/gtksourceview3 \
   deps/libgtop \
   deps/libgksu \
   deps/gksu \
