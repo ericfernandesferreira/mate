@@ -32,21 +32,21 @@ TAG=${TAG:-_msb}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
-    i?86) ARCH=i486 ;;
+    i?86) ARCH=i586 ;;
     arm*) ARCH=arm ;;
        *) ARCH=$( uname -m ) ;;
   esac
 fi
 
-wget -c http://download.gnome.org/sources/libunique/1.1/libunique-1.1.6.tar.bz2
+wget -c http://download.gnome.org/sources/libunique/1.1/$PRGNAM-$VERSION.tar.bz2
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-if [ "$ARCH" = "i486" ]; then
-  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
   LIBDIRSUFFIX=""
 elif [ "$ARCH" = "i686" ]; then
   SLKCFLAGS="-O2 -march=i686 -mtune=i686"
@@ -88,11 +88,11 @@ CXXFLAGS="$SLKCFLAGS" \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
   --enable-debug=no \
-  --enable-dbus=no \
+  --enable-dbus=yes \
   --enable-bacon=yes \
   --disable-maintainer-flags \
   --disable-dependency-tracking \
-  --enable-introspection=no \
+  --enable-introspection=yes \
   --with-x \
   --build=$ARCH-slackware-linux
 
