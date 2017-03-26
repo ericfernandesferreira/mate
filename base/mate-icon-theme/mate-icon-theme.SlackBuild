@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=mate-icon-theme
-VERSION=${VERSION:-1.16.0}
+VERSION=${VERSION:-1.18.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
@@ -60,7 +60,6 @@ find -L . \
 # Flags do Mint
 # --enable-test-themes
 
-cp $CWD/mate.svg mate/scalable/apps/mate.svg
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 sh autogen.sh \
