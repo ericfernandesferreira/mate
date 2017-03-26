@@ -44,6 +44,7 @@ for dir in \
   extra/mate-calc \
   extra/atril \
   extra/caja-extensions \
+  extra/caja-actions \
   extra/mate-applets \
   extra/mate-icon-theme-faenza \
   extra/mate-sensors-applet \
