@@ -40,6 +40,7 @@ MSBROOT=$(pwd)
 # Loop for all dependency packages
 for dir in \
   deps/exempi \
+  deps/glade \
   deps/zenity \
   deps/vala \
   deps/rarian \
@@ -52,7 +53,6 @@ for dir in \
   deps/pangox-compat \
   deps/gtk-engines \
   deps/murrine \
-  deps/glade \
   deps/libpeas \
   deps/gtksourceview3 \
   deps/libgtop \
