@@ -9,7 +9,7 @@ Esse source foi construído principalmente para quem quiser usar a última vers�
 do Mate junto com o pulseaudio ou com jack audio.
 
 Requerimentos:
-- slackware64 14.2 / Current
+- slackware64 14.2
 - pulseaudio ou jack audio
 
 Conteúdo:
@@ -47,7 +47,7 @@ This source was built especially for those who want to use the latest version
 of mate along with pulseaudio or jack audio.
 
 Requirements:
-- slackware64 14.2 / Current
+- slackware64 14.2
 - pulseaudio or jack audio
 
 Contents:
