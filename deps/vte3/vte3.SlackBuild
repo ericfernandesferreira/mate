@@ -86,7 +86,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --disable-test-application \
   --enable-glade-catalogue \
   --enable-introspection \
-  --enable-vala=no \
+  --enable-vala=yes \
   --build=$ARCH-slackware-linux
 
 make
