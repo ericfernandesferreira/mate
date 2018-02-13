@@ -43,7 +43,6 @@ for dir in \
   extra/mate-calc \
   extra/atril \
   extra/caja-extensions \
-  extra/caja-actions \
   extra/mate-applets \
   extra/mate-sensors-applet \
   extra/mate-utils \
