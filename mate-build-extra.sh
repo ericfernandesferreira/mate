@@ -40,6 +40,7 @@ MSBROOT=$(pwd)
 
 # Loop for all extra packages
 for dir in \
+  extra/arc-theme \
   extra/mate-calc \
   extra/atril \
   extra/caja-extensions \
