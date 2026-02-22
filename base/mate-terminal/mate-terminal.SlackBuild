@@ -68,6 +68,7 @@ rm -rf $PRGNAM-$VERSION
 tar xvf $CWD/v$VERSION.tar.gz
 # git clone https://github.com/mate-desktop/mate-terminal.git
 cd $PRGNAM-$VERSION
+git clone https://github.com/mate-desktop/mate-submodules.git
 # git checkout
 
 chown -R root:root .
