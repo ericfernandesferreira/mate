@@ -83,23 +83,31 @@ CXXFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --enable-static=no \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --docdir=/usr/doc/$PRGNAM-$VERSION \
+  --disable-static \
+  --with-x \
+  --enable-debug=no \
   --enable-dbus=yes \
   --enable-bacon=yes \
   --enable-introspection=yes \
+  --disable-maintainer-flags \
   --disable-dependency-tracking \
-  --with-x \
-  --enable-debug=no \
+  --with-html-dir=/usr/doc/$PRGNAM-$VERSION/html \
   --build=$ARCH-slackware-linux
 
 make
 make install DESTDIR=$PKG
 
+# Don't ship .la files:
+rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
+
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a AUTHORS ChangeLog COPYING INSTALL NEWS README $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a AUTHORS COPYING ChangeLog INSTALL NEWS README TODO $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install

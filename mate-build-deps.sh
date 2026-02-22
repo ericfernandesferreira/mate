@@ -41,6 +41,7 @@ MSBROOT=$(pwd)
 for dir in \
   deps/exempi \
   deps/zenity \
+  deps/tinyxml2 \
   deps/rarian \
   deps/yelp-xsl \
   deps/yelp-tools \

@@ -5,15 +5,15 @@
 # exactly 11 lines for the formatting to be correct.  It's also customary to
 # leave one space after the ':'.
 
-          |-----handy-ruler------------------------------------------------------|
-libxnvctrl: A sensor program for read temperature of nvidia video cards used by
-libxnvctrl: xfce4-sensors, glxosd, mate-sensors-applet and others.
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
-libxnvctrl:
+        |-----handy-ruler------------------------------------------------------|
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:
+tinyxml2:

@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-# Slackware build script for gssdp
+# Slackware build script for tinyxml
 
-# Copyright 2013-2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
+# Copyright 2015-2026 Eric Fernandes Ferreira <candelabrus@gmail.com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -22,10 +22,8 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
-
-PRGNAM=gssdp
-VERSION=${VERSION:-1.6.4}
+PRGNAM=tinyxml2
+VERSION=${VERSION:-11.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
@@ -37,7 +35,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/gssdp/1.6/$PRGNAM-$VERSION.tar.xz
+wget -c https://github.com/leethomason/tinyxml2/archive/refs/tags/$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
@@ -64,7 +62,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
+tar xvf $CWD/$VERSION.tar.gz
 cd $PRGNAM-$VERSION
 chown -R root:root .
 find -L . \
@@ -75,26 +73,21 @@ find -L . \
 
 mkdir -p build
 cd build
-  meson setup \
-    --prefix=/usr \
-    --libdir=lib${LIBDIRSUFFIX} \
-    --sysconfdir=/etc \
-    --localstatedir=/var \
-    --buildtype=release \
-    -Dmanpages=false \
-    -Dexamples=false \
-    ..
-
-  meson configure
-  ninja
-  DESTDIR=$PKG ninja install
+  cmake \
+    -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
+    -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -Dtinyxml2_SHARED_LIBS=ON \
+    -DCMAKE_BUILD_TYPE=Release ..
+  make -j17
+  make install DESTDIR=$PKG
 cd ..
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a AUTHORS COPYING NEWS README* $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a LICENSE* readme* $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
