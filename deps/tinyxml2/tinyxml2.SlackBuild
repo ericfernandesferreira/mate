@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Slackware build script for tinyxml
+# Slackware build script for tinyxml2
 
 # Copyright 2015-2026 Eric Fernandes Ferreira <candelabrus@gmail.com>
 # All rights reserved.
