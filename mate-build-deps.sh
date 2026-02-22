@@ -40,6 +40,7 @@ MSBROOT=$(pwd)
 # Loop for all dependency packages
 for dir in \
   deps/exempi \
+  deps/libadwaita \
   deps/zenity \
   deps/tinyxml2 \
   deps/rarian \
