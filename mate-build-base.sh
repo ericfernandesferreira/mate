@@ -46,6 +46,7 @@ for dir in \
   base/libmateweather \
   base/mate-icon-theme \
   base/caja \
+  base/caja-extensions \
   base/mate-polkit \
   base/marco \
   base/libmatemixer \
@@ -64,6 +65,13 @@ for dir in \
   base/mate-media \
   base/mate-power-manager \
   base/mate-system-monitor \
+  base/atril \
+  base/mate-calc \
+  base/mate-applets \
+  base/mate-sensors-applet \
+  base/mate-utils \
+  base/mozo \
+  base/pluma \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

@@ -41,14 +41,6 @@ MSBROOT=$(pwd)
 # Loop for all extra packages
 for dir in \
   extra/arc-theme \
-  extra/mate-calc \
-  extra/atril \
-  extra/caja-extensions \
-  extra/mate-applets \
-  extra/mate-sensors-applet \
-  extra/mate-utils \
-  extra/mozo \
-  extra/pluma \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

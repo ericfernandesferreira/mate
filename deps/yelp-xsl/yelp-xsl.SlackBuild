@@ -26,7 +26,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=yelp-xsl
-VERSION=${VERSION:-3.28.0}
+VERSION=${VERSION:-42.4}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
@@ -38,7 +38,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://download.gnome.org/sources/yelp-xsl/3.28/$PRGNAM-$VERSION.tar.xz
+wget -c http://download.gnome.org/sources/yelp-xsl/42/$PRGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}

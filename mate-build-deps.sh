@@ -40,26 +40,21 @@ MSBROOT=$(pwd)
 # Loop for all dependency packages
 for dir in \
   deps/exempi \
-  deps/glade \
   deps/zenity \
-  deps/vala \
   deps/rarian \
   deps/yelp-xsl \
   deps/yelp-tools \
-  deps/vte3 \
-  deps/libwnck3 \
   deps/libunique \
   deps/libunique3 \
   deps/pangox-compat \
   deps/gtk-engines \
   deps/murrine \
   deps/libpeas \
-  deps/gtksourceview3 \
-  deps/libgtop \
   deps/libgksu \
   deps/gksu \
   deps/gssdp \
   deps/gupnp \
+  deps/libxnvctrl \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

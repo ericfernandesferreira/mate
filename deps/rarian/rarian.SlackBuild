@@ -27,7 +27,7 @@
 # Modified again by Eric Fernandes Ferreira <candelabrus@gmail.com> for my personal Mate Project
 
 PRGNAM=rarian
-VERSION=${VERSION:-0.8.1}
+VERSION=${VERSION:-0.8.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_msb}
 
@@ -39,7 +39,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://rarian.freedesktop.org/Releases/rarian-0.8.1.tar.bz2
+wget -c https://gitlab.freedesktop.org/rarian/rarian/-/archive/$VERSION/$PRGNAM-$VERSION.tar.bz2
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/msb}
