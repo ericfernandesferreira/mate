@@ -93,6 +93,7 @@ sh autogen.sh \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
+  --disable-systemd \
   --without-help-dir \
   --enable-appindicator=auto \
   --build=$ARCH-slackware-linux

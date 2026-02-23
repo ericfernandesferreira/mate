@@ -47,6 +47,7 @@ for dir in \
   base/mate-icon-theme \
   base/caja \
   base/caja-extensions \
+  base/caja-actions \
   base/mate-polkit \
   base/marco \
   base/libmatemixer \
@@ -65,11 +66,11 @@ for dir in \
   base/mate-media \
   base/mate-power-manager \
   base/mate-system-monitor \
-  base/atril \
   base/mate-calc \
   base/mate-applets \
   base/mate-sensors-applet \
   base/mate-utils \
+  base/atril \
   base/mozo \
   base/pluma \
   ; do
