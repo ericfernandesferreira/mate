@@ -47,7 +47,6 @@ for dir in \
   base/mate-icon-theme \
   base/caja \
   base/caja-extensions \
-  base/caja-actions \
   base/mate-polkit \
   base/marco \
   base/libmatemixer \
